@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Story — 감정을 컬러로 기록하는 일기</title>
+<style>
+  :root {
+    --ink: #1c1c1c;
+    --paper: #fdfdfb;
+    --yellow: #f9d94e;
+    --purple: #a94fd4;
+    --pink: #f18fb4;
+    --red: #e6534f;
+    --green: #57c08a;
+    --slate: #4a6572;
+    --tan: #b6ac9a;
+    --indigo: #3f4fb0;
+    --line: #e7e4dc;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", -apple-system, sans-serif;
+  }
+  body {
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 96px 0 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .dots {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 8px;
+  }
+  .dots span {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+  }
+  .dots .s-mark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .d1 { background: var(--yellow); top: 0; left: 50%; transform: translateX(-50%); }
+  .d2 { background: var(--pink); top: 22px; right: 14px; }
+  .d3 { background: var(--purple); top: 22px; left: 14px; }
+  .d4 { background: var(--green); top: 50%; right: 0; transform: translateY(-50%); }
+  .d5 { background: var(--red); top: 50%; left: 0; transform: translateY(-50%); }
+  .d6 { background: var(--tan); bottom: 22px; right: 14px; }
+  .d7 { background: var(--slate); bottom: 22px; left: 14px; }
+  .d8 { background: var(--indigo); bottom: 0; left: 50%; transform: translateX(-50%); }
+
+  h1 {
+    margin: 8px 0 4px;
+    font-size: 40px;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+  }
+
+  main {
+    padding-bottom: 80px;
+  }
+
+  section {
+    padding: 40px 0;
+    border-top: 1px solid var(--line);
+  }
+  section h2 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #888;
+    margin: 0 0 20px;
+  }
+
+  .features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 28px;
+  }
+  .features li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 15px;
+  }
+  .features .dot {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 6px;
+  }
+  .features li:nth-child(1) .dot { background: var(--yellow); }
+  .features li:nth-child(2) .dot { background: var(--pink); }
+  .features li:nth-child(3) .dot { background: var(--purple); }
+  .features li:nth-child(4) .dot { background: var(--green); }
+  .features li:nth-child(5) .dot { background: var(--red); }
+  .features li:nth-child(6) .dot { background: var(--indigo); }
+
+  .privacy-note {
+    font-size: 15px;
+    color: #444;
+    background: #f5f3ee;
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .privacy-note strong { color: var(--ink); }
+
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid var(--line);
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+  }
+
+  footer {
+    padding: 32px 0 48px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    border-top: 1px solid var(--line);
+  }
+  footer a { color: #999; }
+
+  @media (max-width: 480px) {
+    header { padding: 64px 0 40px; }
+    .dots { width: 170px; height: 170px; }
+    .dots .s-mark { font-size: 72px; }
+    h1 { font-size: 30px; }
+    .features { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="dots">
+      <span class="d1"></span>
+      <span class="d2"></span>
+      <span class="d3"></span>
+      <span class="d4"></span>
+      <span class="d5"></span>
+      <span class="d6"></span>
+      <span class="d7"></span>
+      <span class="d8"></span>
+      <div class="s-mark">S</div>
+    </div>
+    <h1>Story</h1>
+    <p class="tagline">감정을 컬러로 기록하는 일기</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>이런 걸 할 수 있어요</h2>
+    <ul class="features">
+      <li><span class="dot"></span>텍스트 또는 음성으로 간편하게 일기 작성</li>
+      <li><span class="dot"></span>8가지 감정과 3단계 강도로 섬세하게 기록</li>
+      <li><span class="dot"></span>AI가 감정 패턴을 분석해 리포트로 제공</li>
+      <li><span class="dot"></span>캘린더로 한눈에 보는 감정 기록</li>
+      <li><span class="dot"></span>메모와 일정도 함께 관리</li>
+      <li><span class="dot"></span>일기를 eBook·PDF로 내보내기</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>내 데이터는 내 것</h2>
+    <p class="privacy-note">
+      Story는 회원의 일기와 기록을 <strong>서버에 저장하지 않습니다.</strong>
+      Google 또는 Apple 계정으로 로그인하면, 기록은 오직 본인의
+      <strong>Google Drive 또는 iCloud</strong>에만 저장됩니다.
+      로그인 없이도 앱을 바로 시작할 수 있습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>다운로드 및 안내</h2>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.tree.story">Google Play에서 받기</a>
+      <a class="btn btn-secondary" href="https://apps.apple.com/kr/app/story-마인드-리포트/id6797939506">App Store에서 받기</a>
+      <a class="btn btn-secondary" href="https://sites.google.com/view/aquatree-story-privacy">개인정보처리방침</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Eunjung Pahk · Story
+  </div>
+</footer>
+
+</body>
+</html>
