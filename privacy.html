@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보처리방침 — Story</title>
+<style>
+  :root {
+    --ink: #1c1c1c;
+    --paper: #fdfdfb;
+    --line: #e7e4dc;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", -apple-system, sans-serif;
+    line-height: 1.7;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+  a { color: #3f4fb0; }
+  h1 {
+    font-size: 26px;
+    margin-bottom: 4px;
+  }
+  .updated {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .intro {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-size: 17px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    border-top: 1px solid var(--line);
+    padding-top: 32px;
+  }
+  p, li { font-size: 15px; color: #333; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  .back {
+    display: inline-block;
+    margin-bottom: 32px;
+    font-size: 14px;
+    color: #888;
+    text-decoration: none;
+  }
+  footer {
+    margin-top: 56px;
+    font-size: 13px;
+    color: #999;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="./">← Story 소개로 돌아가기</a>
+  <h1>Story 개인정보처리방침</h1>
+  <p class="updated">시행일: 2026년 7월 17일</p>
+
+  <p class="intro">
+    AQUATREE(개발자: 박은정, 이하 "개발자")는 감정 기록 다이어리 앱 "Story"(이하 "앱")를
+    제공하며, 이용자의 개인정보를 소중히 여기고 관련 법령을 준수합니다. 본 방침은 앱이
+    어떤 정보를 다루는지, 그 정보가 어디에 저장되는지, 이용자가 자신의 정보를 어떻게
+    관리할 수 있는지를 설명합니다.
+  </p>
+
+  <h2>1. 핵심 원칙: 이용자의 기록은 이용자의 것입니다</h2>
+  <p>
+    앱에 기록된 모든 일기 데이터는 이용자 본인의 Google Drive에만 저장됩니다.
+    개발자는 별도의 서버를 운영하지 않으며, 이용자의 일기 내용을 수집·열람·보관하지 않습니다.
+  </p>
+
+  <h2>2. 수집·이용하는 정보</h2>
+  <p>앱은 서비스 제공을 위해 다음 정보를 처리합니다.</p>
+  <p>
+    <strong>(1) Google 계정 정보</strong> — 로그인 시 Google로부터 이메일 주소, 이름,
+    프로필 사진을 제공받아 앱 화면 표시와 Google Drive 연동에 사용합니다.
+  </p>
+  <p>
+    <strong>(2) 이용자가 직접 기록하는 정보</strong> — 감정(종류·강도), 일기 및 메모 텍스트,
+    위치, 음식·사람·음악·책 등 카테고리 기록, 이용자가 추가한 사용자 정의 카테고리, 일정.
+    이 정보는 이용자가 스스로 입력한 범위에서만 처리됩니다.
+  </p>
+  <p>
+    <strong>(3) 음성 정보</strong> — 음성으로 일기를 입력할 경우 Android 시스템의 음성 인식
+    기능(Google 제공)을 통해 텍스트로 변환됩니다. 앱에서 음성 녹음 기능을 사용할 경우 녹음
+    파일은 이용자 기기의 저장공간(다운로드 폴더)에만 저장되며 외부로 전송되지 않습니다.
+  </p>
+  <p>
+    <strong>(4) 기기 권한</strong> — 마이크(음성 입력·녹음), 위치(위치 기록 기능 사용 시)에
+    대한 접근 권한을 요청하며, 이용자는 권한을 거부할 수 있습니다. 거부 시 해당 기능만
+    제한됩니다.
+  </p>
+
+  <h2>3. 저장 위치와 보관 방법</h2>
+  <p>
+    일기 데이터는 이용자 본인의 Google Drive에 파일(story_diary.json)로 저장됩니다.
+    앱은 Google이 제공하는 제한된 권한(drive.file)만 사용하므로, 앱이 직접 생성한 파일에만
+    접근할 수 있고 이용자의 다른 Drive 파일에는 접근할 수 없습니다. 데이터의 보관 기간은
+    이용자가 삭제하기 전까지이며, 개발자가 임의로 삭제하거나 이전하지 않습니다.
+  </p>
+
+  <h2>4. AI 분석 기능과 제3자 전송</h2>
+  <p>
+    이용자가 앱 내 "AI 분석" 기능을 직접 실행하는 경우에 한하여, 선택한 기간의 일기 내용이
+    분석 목적으로 다음 AI 서비스 제공자에게 전송됩니다.
+  </p>
+  <ul>
+    <li>Google (Gemini API, 미국)</li>
+  </ul>
+  <p>
+    전송은 이용자가 분석을 요청한 시점에만 이루어지며, 분석 결과를 받기 위한 목적 외로
+    사용되지 않습니다. 제공자의 데이터 처리에 관한 내용은 Google의 개인정보처리방침을
+    따릅니다. AI 분석 기능을 사용하지 않으면 일기 내용은 외부로 전송되지 않습니다.
+    향후 다른 AI 서비스 제공자가 추가되는 경우 본 방침을 갱신하여 공지합니다.
+  </p>
+  <p>위 경우를 제외하고 개발자는 이용자의 개인정보를 제3자에게 제공하지 않습니다.</p>
+
+  <h2>5. 이용자의 권리와 데이터 삭제 방법</h2>
+  <p>이용자는 언제든지 자신의 데이터를 열람·수정·삭제할 수 있습니다.</p>
+  <ul>
+    <li>앱 내에서 일기·메모를 개별 삭제할 수 있습니다.</li>
+    <li>Google Drive에서 story_diary.json 파일을 직접 삭제하면 모든 일기 데이터가 삭제됩니다.</li>
+    <li>Google 계정 설정(myaccount.google.com &gt; 보안 &gt; 서드 파티 앱 액세스)에서 앱의 접근 권한을 철회할 수 있습니다.</li>
+    <li>기기에 저장된 음성 녹음 파일은 기기의 파일 관리자에서 삭제할 수 있습니다.</li>
+  </ul>
+  <p>개발자는 이용자의 데이터를 보유하지 않으므로, 위 방법으로 삭제 시 데이터는 완전히 삭제됩니다.</p>
+
+  <h2>6. 아동의 개인정보</h2>
+  <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+  <h2>7. 개인정보 보호를 위한 노력</h2>
+  <p>
+    앱은 Google의 공식 로그인(OAuth)과 보안 연결(HTTPS)을 통해서만 데이터를 주고받으며,
+    최소한의 권한 원칙에 따라 필요한 범위의 접근 권한만 요청합니다.
+  </p>
+
+  <h2>8. 방침의 변경</h2>
+  <p>본 방침이 변경되는 경우 앱 업데이트 또는 본 페이지를 통해 공지합니다.</p>
+
+  <h2>9. 문의처</h2>
+  <p>개인정보 처리에 관한 문의는 아래로 연락해 주시기 바랍니다.</p>
+  <p>
+    개발자: AQUATREE (박은정)<br>
+    이메일: <a href="mailto:gjhgjwgny@gmail.com">gjhgjwgny@gmail.com</a>
+  </p>
+
+  <footer>
+    &copy; 2026 Eunjung Pahk · Story
+  </footer>
+</div>
+</body>
+</html>
